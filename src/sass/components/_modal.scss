@@ -1,0 +1,116 @@
+.modal{
+    height: 880px;
+    width: 80%;
+    border: none;
+    background: var(--color-background);
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    z-index: 99;
+    &__content{
+        display: flex;
+        align-items: center;
+    }
+    &__header{
+        display: flex;
+        justify-content: space-between;
+    }
+    &__img{
+        background: black;
+        height: 880px;
+        display: flex;
+        align-items: center;
+    }
+    &__img img{
+        width: 100%;
+    }
+    &__form{
+        padding: 30px;
+    }
+    &__title{
+        font-size: 42px;
+        color: #fff;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+    &__text{
+        color: #808080;
+        font-style: 14px;
+        margin-bottom: 50px;
+        width: 80%;
+    }
+    &__group{ 
+        position:relative; 
+        margin-bottom:20px; 
+    }
+    & input{
+        width: 100%;
+    }
+    &__label{
+        color:#fff; 
+        font-size: 16px;
+        font-weight: 700;
+        position: absolute;
+        pointer-events: none;
+        left: 25px;
+        top: 25px;
+        transition: 0.2s ease all; 
+        -moz-transition: 0.2s ease all; 
+        -webkit-transition: 0.2s ease all;
+    }
+    & input:focus ~ label, input:valid ~ label{
+        top: 5px;
+        font-size: 12px;
+        opacity: .5;
+    }
+    &__send{
+        display: flex;
+    }
+    &__buttons{
+        display: flex;
+    }
+    &__politic{
+        font-size: 12px;
+        color: #808080;
+        margin-left: 40px;
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 992px){
+    .modal{
+        height: 95%;
+        width: 95%;
+        &__img img{
+            width: 100%;
+        }
+    }
+}
+
+@media screen and (max-width: 768px){
+    .modal{
+        height: 95%;
+        width: 95%;
+        &__img{
+            display: none;
+        }
+    }
+}
+
+@media screen and (max-width: 576px){
+    .modal{
+        &__title{
+            font-size: 30px;
+        }
+        &__send{
+            display: block;
+        }
+        &__politic{
+            margin-left: 0;
+            margin-top: 20px;
+        }
+    }
+}
